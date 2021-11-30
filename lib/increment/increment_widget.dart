@@ -10,16 +10,21 @@ class IncrementWidget extends StatefulWidget {
 class _IncrementWidgetState extends State<IncrementWidget> {
   @override
   Widget build(BuildContext context) {
+    // ignore: avoid_print
     print('Construindo tela!');
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bloc'),
+        title: const Text('Bloc'),
       ),
       body: Center(
-        child: Text('Botão pressionado ${_counter} vezes'),
+        child: StreamBuilder(
+          builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+            return Text("O botão foi pressionado ${snapshot.data} vezes");
+          },
+        ),
       ),
       floatingActionButton:
-          FloatingActionButton(child: Icon(Icons.add), onPressed: () {}),
+          FloatingActionButton(child: const Icon(Icons.add), onPressed: () {}),
     );
   }
 }
