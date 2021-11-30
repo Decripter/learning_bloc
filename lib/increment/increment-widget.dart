@@ -8,8 +8,6 @@ class IncrementWidget extends StatefulWidget {
 }
 
 class _IncrementWidgetState extends State<IncrementWidget> {
-  var _counter = 0;
-
   @override
   Widget build(BuildContext context) {
     print('Construindo tela!');
@@ -20,13 +18,8 @@ class _IncrementWidgetState extends State<IncrementWidget> {
       body: Center(
         child: Text('Botão pressionado ${_counter} vezes'),
       ),
-      floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () {
-            setState(() {
-              _counter++;
-            });
-          }),
+      floatingActionButton:
+          FloatingActionButton(child: Icon(Icons.add), onPressed: () {}),
     );
   }
 }
