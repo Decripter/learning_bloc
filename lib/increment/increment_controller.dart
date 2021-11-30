@@ -16,7 +16,7 @@ class IncrementController implements BlocBase {
 
   @override
   void dispose() {
-    // TODO: implement dispose
+    _counterController.close();
   }
 
   @override
