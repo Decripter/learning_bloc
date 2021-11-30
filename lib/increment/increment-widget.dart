@@ -12,6 +12,7 @@ class _IncrementWidgetState extends State<IncrementWidget> {
 
   @override
   Widget build(BuildContext context) {
+    print('Construindo tela!');
     return Scaffold(
       appBar: AppBar(
         title: Text('Bloc'),
