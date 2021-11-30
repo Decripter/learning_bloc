@@ -7,6 +7,10 @@ class IncrementController implements BlocBase {
   var counter = 0;
   var _counterController = StreamController<int>();
 
+  Stream<int> get outCounter {
+    return _counterController.stream;
+  }
+
   @override
   void addListener(VoidCallback listener) {
     // TODO: implement addListener
